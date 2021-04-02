@@ -18,10 +18,7 @@
   - [Lottie](#lottie)
   - [Appearance](#appearance)
 - [Misc](#misc)
-  - [Showcase](#showcase)
-  - [Support this project](#support-this-project)
   - [Credits](#credits)
-  - [License](#license)
 
 # Get started
 
