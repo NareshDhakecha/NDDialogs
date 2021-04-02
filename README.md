@@ -38,7 +38,7 @@ In your app `build.gradle` file:
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:core:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:core:<latest-version>'
 }
 ```
 
@@ -189,14 +189,14 @@ The `Options` Sheet lets you display a grid or list of options.
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:info:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:info:<latest-version>'
 }
 ```
 
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:options:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:options:<latest-version>'
 }
 ```
 
@@ -258,7 +258,7 @@ The `Clock Time` Sheet lets you quickly pick a time.
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:time-clock:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:time-clock:<latest-version>'
 }
 ```
 
@@ -300,7 +300,7 @@ The `Time` Sheet lets you pick a duration time in a specific format.
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:time:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:time:<latest-version>'
 }
 ```
 
@@ -361,7 +361,7 @@ The `Input` Sheet lets you display a form consisting of various inputs.
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:input:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:input:<latest-version>'
 }
 ```
 
@@ -479,7 +479,7 @@ The `Calendar` Sheet lets you pick a date or date range. This type was build usi
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:calendar:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:calendar:<latest-version>'
 }
 ```
 
@@ -528,7 +528,7 @@ The `Color` Sheet lets you pick a color. Display the default material colors or 
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:color:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:color:<latest-version>'
 }
 ```
 
@@ -573,7 +573,7 @@ With just the 'core' module you are able to create your own sheet based on this 
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:core:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:core:<latest-version>'
 }
 ```
 
@@ -631,7 +631,7 @@ The `Lottie` modules gives you the ability to use a [Lottie animations](https://
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.NareshDhakecha.NDDialog:lottie:<latest-version>'
+  implementation 'com.github.NareshDhakecha.NDDialogs:lottie:<latest-version>'
 }
 ```
 
