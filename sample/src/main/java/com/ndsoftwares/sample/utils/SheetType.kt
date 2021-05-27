@@ -7,6 +7,8 @@ import com.ndsoftwares.sample.R
 
 enum class SheetType(@StringRes val titleRes: Int, @StringRes val descRes: Int) {
 
+    CALC(R.string.calc_sheet, R.string.calc_sheet_desc),
+
     OPTIONS(R.string.options_sheet, R.string.options_sheet_desc),
 
     COLOR(R.string.color_sheet, R.string.color_sheet_desc),

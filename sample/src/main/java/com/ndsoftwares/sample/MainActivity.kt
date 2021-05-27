@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.textfield.TextInputLayout
+import com.ndsoftwares.dialogs.calc.NDCalcDialog
 import com.ndsoftwares.sample.custom_sheets_example.CustomNDDialog
 import com.ndsoftwares.sample.databinding.MainActBinding
 import com.ndsoftwares.sample.utils.SheetExample
@@ -69,6 +70,7 @@ class MainActivity : AppCompatActivity() {
     private fun showBottomSheet(example: SheetExample) {
 
         when (example) {
+            SheetExample.CALC -> showCalcSheet()
             SheetExample.OPTIONS_LIST -> showOptionsSheetList()
             SheetExample.OPTIONS_HORIZONTAL_SMALL -> showOptionsSheetGridSmall(DisplayMode.GRID_HORIZONTAL)
             SheetExample.OPTIONS_HORIZONTAL_MIDDLE -> showOptionsSheetGridMiddle(DisplayMode.GRID_HORIZONTAL)
@@ -100,6 +102,20 @@ class MainActivity : AppCompatActivity() {
             SheetExample.INPUT_LONG -> showInputSheetLong()
             SheetExample.INPUT_PASSWORD -> showInputSheetPassword()
             SheetExample.CUSTOM1 -> showCustomSheet()
+        }
+    }
+
+    private fun showCalcSheet() {
+        NDCalcDialog().show(this){
+            style(getSheetStyle())
+            title("Calculator") // Set the title of the sheet
+            defaultAmount(245.0)
+            onPositive("Save") { amount ->
+                showToastLong(
+                    "Amount",
+                    " $amount"
+                )
+            }
         }
     }
 
@@ -228,6 +244,7 @@ class MainActivity : AppCompatActivity() {
             )
             onPositive { index, option ->
                 // Selected index / option
+                showOptionsSheetGridSmall(DisplayMode.GRID_HORIZONTAL)
             }
             onDismiss {
                 binding.exampleRecyclerView.visibility = View.VISIBLE
@@ -251,6 +268,7 @@ class MainActivity : AppCompatActivity() {
             )
             onPositive { index, option ->
                 // All selected indices / options
+                showOptionsSheetGridMiddle(DisplayMode.GRID_HORIZONTAL)
             }
         }
 
@@ -286,6 +304,8 @@ class MainActivity : AppCompatActivity() {
             )
             onPositiveMultiple { selectedIndices: MutableList<Int>, selectedOptions: MutableList<Option> ->
                 // All selected indices / options
+
+                showOptionsSheetGridLarge(DisplayMode.GRID_HORIZONTAL)
             }
         }
     }
@@ -301,16 +321,10 @@ class MainActivity : AppCompatActivity() {
                 Option(R.drawable.ic_fruit_pineapple, "Pineapple"),
                 Option(R.drawable.ic_food_croissant, "Croissant"),
                 Option(R.drawable.ic_apple, "Apple"),
-                Option(
-                    R.drawable.ic_fruit_cherries,
-                    "Cherries"
-                ).disable(), // An option can be disabled
+                Option(R.drawable.ic_fruit_cherries, "Cherries").disable(), // An option can be disabled
                 Option(R.drawable.ic_food_pasta, "Pasta"),
                 Option(R.drawable.ic_fruit_watermelon, "Watermelon"),
-                Option(
-                    R.drawable.ic_fruit_grapes,
-                    "Grapes"
-                ), // An option can be preselected
+                Option(R.drawable.ic_fruit_grapes, "Grapes"), // An option can be preselected
                 Option(R.drawable.ic_food_burger, "Burger"),
                 Option(R.drawable.ic_fruit_pineapple, "Pineapple"),
                 Option(R.drawable.ic_food_croissant, "Croissant")
@@ -518,7 +532,7 @@ class MainActivity : AppCompatActivity() {
 
         var password1: String? = "1"
         var password2: String?
-        val regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
+        val regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$"
         val errorText =
             "Must contain at least one digit, lower case letter, upper case letter, special character, no whitespace and at least 8 characters."
 

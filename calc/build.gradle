@@ -1,0 +1,17 @@
+ext.module_group = "com.ndsoftwares.dialogs"
+ext.module_name = "calc"
+
+apply from: rootProject.file("gradle/android_library_config.gradle")
+
+dependencies {
+    api project(':core')
+
+    compileOnly deps.androidx.annotations
+    implementation deps.androidx.constraint
+    implementation deps.androidx.core
+    implementation deps.kotlin.stdlib8
+    implementation deps.google_material
+
+    implementation 'net.objecthunter:exp4j:0.4.8'
+    implementation 'org.apache.commons:commons-lang3:3.6'
+}

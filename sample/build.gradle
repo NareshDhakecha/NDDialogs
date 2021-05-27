@@ -13,6 +13,7 @@ android {
 dependencies {
 
     implementation project(':core')
+    implementation project(':calc')
     implementation project(':info')
     implementation project(':input')
     implementation project(':time')

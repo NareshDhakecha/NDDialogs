@@ -6,6 +6,8 @@ import com.ndsoftwares.sample.R
 
 enum class SheetExample(val type: SheetType, @StringRes val textRes: Int) {
 
+    CALC(SheetType.CALC, R.string.info),
+
     INFO(SheetType.INFO, R.string.info),
 
     INFO_COVER_IMAGE_1(SheetType.INFO, R.string.info_cover_image_1),

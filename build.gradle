@@ -1,10 +1,12 @@
 buildscript {
 
     apply from: rootProject.file("dependencies.gradle")
+    ext {
+        kotlin_version = '1.5.0-release-764'
+    }
 
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
     }
@@ -19,7 +21,6 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
     }

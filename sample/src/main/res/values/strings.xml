@@ -58,4 +58,6 @@
     <string name="dialog">Dialog</string>
     <string name="bottom_sheet">BottomSheet</string>
     <string name="random">Random</string>
+    <string name="calc_sheet">CalculatorSheet</string>
+    <string name="calc_sheet_desc">Show a calculator for amount input.</string>
 </resources>
